@@ -12,7 +12,7 @@ def handle_image_error(error_code: int) -> tuple[dict, int]:
     error_messages = {
         404: "Image not found",
         408: "Timeout when downloading image",
-        500: "Failed to download image due to server error"
+        500: "Failed to download image due to upstream server error"
     }
     return {"error": error_messages.get(error_code, "Unknown error")}, error_code
 
